@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primary">#636220</color>
+    <color name="primary2">#838100</color>
     <color name="primary_dark">#323214</color>
     <color name="primary_text">#FFFFFF</color>
     <color name="primary_text_main">#DFC205</color>
@@ -9,5 +10,5 @@
     <color name="input_background">#20FFFFFF</color>
     <color name="icon_background">#20FFFFFF</color>
     <color name="error">#800020</color>
-    <color name="received_nessage_background">#121212</color>
+    <color name="dark">#121212</color>
 </resources>

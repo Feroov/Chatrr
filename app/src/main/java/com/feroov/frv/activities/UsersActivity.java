@@ -2,11 +2,13 @@ package com.feroov.frv.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.feroov.frv.adapters.UsersAdapter;
 import com.feroov.frv.databinding.ActivityUsersBinding;
+import com.feroov.frv.listeners.UserListener;
 import com.feroov.frv.models.User;
 import com.feroov.frv.utilities.Constants;
 import com.feroov.frv.utilities.PreferenceManager;
@@ -16,7 +18,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsersActivity extends AppCompatActivity
+public class UsersActivity extends AppCompatActivity implements UserListener
 {
 
     private ActivityUsersBinding binding;
@@ -62,11 +64,12 @@ public class UsersActivity extends AppCompatActivity
                             user.email = queryDocumentSnapshot.getString(Constants.KEY_EMAIL);
                             user.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
                             user.token = queryDocumentSnapshot.getString(Constants.KEY_FCM_TOKEN);
+                            user.id = queryDocumentSnapshot.getId();
                             users.add(user);
                         }
                         if(users.size() > 0)
                         {
-                            UsersAdapter usersAdapter = new UsersAdapter(users);
+                            UsersAdapter usersAdapter = new UsersAdapter(users, this);
                             binding.usersRecyclerView.setAdapter(usersAdapter);
                             binding.usersRecyclerView.setVisibility(View.VISIBLE);
                         } else{ showErrorMessage(); }
@@ -84,5 +87,14 @@ public class UsersActivity extends AppCompatActivity
     {
         if(isLoading) { binding.progressBar.setVisibility(View.VISIBLE); }
         else { binding.progressBar.setVisibility(View.INVISIBLE); }
+    }
+
+    @Override
+    public void onUserClicked(User user)
+    {
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        intent.putExtra(Constants.KEY_USER, user);
+        startActivity(intent);
+        finish();
     }
 }
