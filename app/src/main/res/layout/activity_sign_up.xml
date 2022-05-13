@@ -19,9 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_70sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/logo"
+            android:src="@drawable/logotransparent"
             app:shapeAppearanceOverlay="@style/logo" />
 
         <TextView
