@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "473214226704",
+    "project_id": "chatrr-1ef04",
+    "storage_bucket": "chatrr-1ef04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473214226704:android:ea7130d92ab6d8fab29595",
+        "android_client_info": {
+          "package_name": "com.feroov.frv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473214226704-o0stn525ihpg91597f6irb060vtk23dr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlDxGH5LC2JWBkBAlk7dRXf7sq1MbvyD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473214226704-o0stn525ihpg91597f6irb060vtk23dr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
