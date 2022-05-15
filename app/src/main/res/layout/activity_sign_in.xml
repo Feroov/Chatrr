@@ -54,7 +54,7 @@
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_16sdp"
             android:paddingEnd="@dimen/_16sdp"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/primary_text_main"
             android:textSize="@dimen/_13ssp" />
 
         <EditText
@@ -69,7 +69,7 @@
             android:inputType="textPassword"
             android:paddingStart="@dimen/_16sdp"
             android:paddingEnd="@dimen/_16sdp"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/primary_text_main"
             android:textSize="@dimen/_13ssp"
             tools:ignore="TextFields" />
 
